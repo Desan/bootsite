@@ -1,0 +1,63 @@
+/* Header
+=====================================>
+ */
+#header {
+	margin-bottom: 16px;
+}
+
+.logo {
+	padding: 36px 0;
+}
+
+.logo_title {
+	font-family: 'Abril Fatface', serif;
+	font-size: 3.2em;
+	text-transform: uppercase;
+}
+
+.logo_title::first-letter {
+	font-size: 1.15em;
+}
+
+.logo_tagline {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: $normal;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+
+.menu-icon, .search-icon {
+	padding: 36px 0 0 0;
+}
+
+
+#nav {
+	padding: 18px 0;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		display: inline-block;
+		list-style: none;
+		padding: 0 18px;
+	}
+	a {
+		text-transform: uppercase;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: $bold;
+		letter-spacing: -1px;
+	}
+}
+
+.dropdown {
+	display: none;
+}
+
+.social {
+	text-align: right;
+	a {
+		margin-left: 18px;
+	}
+}

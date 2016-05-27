@@ -1,0 +1,66 @@
+/*	Theme
+=====================================>
+*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: $normal;
+	font-size: 14px;
+}
+
+
+
+.lined-top, .lined-bottom {
+	border-width: 4px;
+	border-color: $gray-color;
+}
+
+.lined-top {
+	border-top-style: double;
+}
+
+.lined-bottom {
+	border-bottom-style: double;
+}
+
+.squared {
+	color: $dark-gray-color;
+	border-color: $dark-gray-color;
+	border-style: solid;
+	border-width: 1px;
+	padding: 10px;
+	margin-right: 4px;
+}
+
+.btn-black {
+	font-family: 'Abril Fatface', serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: $white-color;
+	background-color: #000;
+	border-radius: 0;
+	padding: 16px 18px;
+}
+
+.form-control {
+	padding: 26px 12px;
+}
+
+
+h2 {
+	font-family: 'Abril Fatface', serif;
+	font-size: 1.5em;
+	line-height: 1.2;
+}
+
+h3 {
+	font-family: serif;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+p {
+	color: $dark-gray-color;
+	font-size: 1em;
+	line-height: 2em;
+	padding-bottom: 1em;
+}

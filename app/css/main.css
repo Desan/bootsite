@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/* Base styles
+=====================================>
+*/
+a, a:hover, a:visited {
+  color: black; }
+
+a:hover, a:visited {
+  text-decoration: none; }
+
+/* Header
+=====================================>
+ */
+#header {
+  margin-bottom: 16px; }
+
+.logo {
+  padding: 36px 0; }
+
+.logo_title {
+  font-family: 'Abril Fatface', serif;
+  font-size: 3.2em;
+  text-transform: uppercase; }
+
+.logo_title::first-letter {
+  font-size: 1.15em; }
+
+.logo_tagline {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px; }
+
+.menu-icon, .search-icon {
+  padding: 36px 0 0 0; }
+
+#nav {
+  padding: 18px 0; }
+  #nav ul {
+    padding: 0;
+    margin: 0; }
+  #nav li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 18px; }
+  #nav a {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px; }
+
+.dropdown {
+  display: none; }
+
+.social {
+  text-align: right; }
+  .social a {
+    margin-left: 18px; }
+
+/* Content block
+=====================================>
+*/
+#content {
+  padding-left: 0;
+  padding-right: 0; }
+
+#carousel {
+  margin-bottom: 60px; }
+
+/* Carousel
+=====================================>
+*/
+.carousel-inner .carousel-caption {
+  margin-bottom: 23%; }
+
+.carousel-inner h1 {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.2em;
+  padding-bottom: 16px; }
+
+.carousel-inner a {
+  color: white; }
+
+.carousel-indicators li, .carousel-indicators .active {
+  margin-right: 8px; }
+
+/* Sidebar
+=====================================>
+*/
+#sidebar {
+  padding-right: 0;
+  padding-left: 32px; }
+
+.block-title {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding: 6px 0;
+  margin-bottom: 18px; }
+
+.sidebar-block {
+  margin-bottom: 60px; }
+
+.accordion {
+  font-family: serif;
+  font-size: 1.1em;
+  padding-left: 0;
+  list-style: none; }
+  .accordion a::before {
+    font-family: FontAwesome;
+    content: "";
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 12px; }
+
+.post {
+  margin-bottom: 60px; }
+  .post h2 {
+    margin-top: 0.5em; }
+
+.meta {
+  font-family: serif; }
+
+.meta-item {
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 0.9em;
+  font-weight: 600; }
+
+.meta-author::before {
+  font-family: FontAwesome;
+  content: "";
+  display: inline-block;
+  margin-right: 6px; }
+
+.meta-time::before {
+  font-family: FontAwesome;
+  content: "";
+  display: inline-block;
+  margin-right: 6px; }
+
+.meta-comments::before {
+  font-family: FontAwesome;
+  content: "";
+  display: inline-block;
+  margin-right: 6px; }
+
+.page-pagination {
+  font-size: 12px;
+  font-family: serif;
+  margin: 0;
+  padding: 40px 0; }
+  .page-pagination li {
+    display: inline-block;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    text-align: center; }
+
+/* Footer
+=====================================>
+*/
+#footer {
+  background-color: black;
+  color: #ffffff; }
+
+.col-footer-img {
+  position: relative;
+  min-height: 1px;
+  padding: 0px;
+  width: 12.5%;
+  float: left;
+  margin-bottom: 60px; }
+
+.copyright {
+  margin-bottom: 20px; }
+
+.square-social {
+  padding-bottom: 60px; }
+
+/*	Theme
+=====================================>
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px; }
+
+.lined-top, .lined-bottom {
+  border-width: 4px;
+  border-color: #d5d5d5; }
+
+.lined-top {
+  border-top-style: double; }
+
+.lined-bottom {
+  border-bottom-style: double; }
+
+.squared {
+  color: #858585;
+  border-color: #858585;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  margin-right: 4px; }
+
+.btn-black {
+  font-family: 'Abril Fatface', serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000;
+  border-radius: 0;
+  padding: 16px 18px; }
+
+.form-control {
+  padding: 26px 12px; }
+
+h2 {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.5em;
+  line-height: 1.2; }
+
+h3 {
+  font-family: serif;
+  font-weight: bold;
+  font-size: 1.25em; }
+
+p {
+  color: #858585;
+  font-size: 1em;
+  line-height: 2em;
+  padding-bottom: 1em; }
+
+/* CSS Helpers
+=====================================>
+*/
+.full-width {
+  width: 100%; }

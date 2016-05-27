@@ -1,0 +1,41 @@
+mixin media-object(link, image_src, title)
+	.media
+		.media-left.media-middle
+			a(href= link): img.media-object(src= image_src)
+		.media-body
+			a(href= link): h3= title
+
+
+mixin post-tiled(link, image_src, title)
+	.post.col-sm-6
+		a(href= link): img.img-responsive.full-width(src= image_src)
+		a(href= link): h2= title
+		p.lined-bottom Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla velit, mollis eget metus sit amet, luctus suscipit neque. Nulla nec tempus nunc. Sed consequat
+		include _meta_block.jade
+
+mixin post-featured(link, image_src, title)
+	.post.col-sm-12
+		a(href= link): img.img-responsive.full-width(src= image_src)
+		a(href= link): h2= title
+		p.lined-bottom Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla velit, mollis eget metus sit amet, luctus suscipit neque. Nulla nec tempus nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla velit, mollis eget metus sit amet, luctus suscipit neque. Nulla nec tempus nunc. 
+		include _meta_block.jade
+
+mixin post-feed(link, image_src, title)
+	.post.col-sm-12
+		.row
+			.col-sm-6
+				a(href= link): img.img-responsive.full-width(src= image_src)
+			.col-sm-6
+				a(href= link): h2= title
+				p.lined-bottom Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla velit, mollis eget metus sit amet, luctus suscipit neque. Nulla nec tempus nunc. Sed consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				include _meta_block.jade
+
+mixin pagination
+	.col-xs-12.lined-top
+		ul.page-pagination
+			li.squared: a(href="#") 1
+			li.squared: a(href="#") 2
+			li.squared: a(href="#") 3
+			li ...
+			li.squared: a(href="#") 14
+			li.squared: a(href="#"): i.fa.fa-long-arrow-right.fa-fw

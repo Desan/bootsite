@@ -1,0 +1,49 @@
+.post {
+	margin-bottom: 60px;
+	h2 {
+		margin-top: 0.5em;
+	}
+	img {
+
+	}
+}
+
+.meta {
+	font-family: serif;
+}
+
+.meta-item {
+	display: inline-block;
+	margin-right: 16px;
+	font-size: 0.9em;
+	font-weight: $bold;
+}
+
+.meta-author::before {
+	@include awesome-icon("\f007");
+	margin-right: 6px;
+}
+
+.meta-time::before {
+	@include awesome-icon("\f017");
+	margin-right: 6px;
+}
+
+.meta-comments::before {
+	@include awesome-icon("\f086");
+	margin-right: 6px;
+}
+
+.page-pagination {
+	font-size: 12px;
+	font-family: serif;
+	margin: 0;
+	padding: 40px 0;
+	li {
+		display: inline-block;
+		padding: 6px;
+		width: 32px;
+		height: 32px;
+		text-align: center;
+	}
+}

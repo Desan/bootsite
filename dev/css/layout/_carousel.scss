@@ -1,0 +1,24 @@
+/* Carousel
+=====================================>
+*/
+
+.carousel-inner {
+	.carousel-caption {
+		margin-bottom: 23%;
+	}
+	h1 {
+			font-family: 'Abril Fatface', serif;
+			font-size: 2.2em;
+			padding-bottom: 16px;
+	}
+	a {
+		color: white;
+	}
+}
+
+.carousel-indicators {
+	li, .active {
+		margin-right: 8px;
+	}
+
+}

@@ -1,0 +1,68 @@
+include _elements.jade
+doctype html
+html
+	head
+		title Bootsite
+		meta(charset="utf8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"  type="text/css")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface"  type="text/css")
+		link(rel="stylesheet" href="css/bootstrap.min.css")
+		link(rel="stylesheet" href="css/font-awesome.min.css")
+		link(rel="stylesheet" href="css/main.css")
+
+	body
+		.container
+			#header
+				include _header.jade
+			#main.row
+				#content.col-md-8.col-sm-12
+					include _carousel.jade
+					.row
+						+post-tiled('#', 'http://placehold.it/370x250', 'Title goes here')
+						+post-tiled('#', 'http://placehold.it/370x250', 'Another title')
+						+post-tiled('#', 'http://placehold.it/370x250', 'Third title')
+						+post-tiled('#', 'http://placehold.it/370x250', 'Third title')
+					.row
+						+post-featured('#', 'http://placehold.it/768x450', 'Third title')
+					.row
+						+post-feed('#', 'http://placehold.it/370x250', 'Title goes here')
+						+post-feed('#', 'http://placehold.it/370x250', 'Title goes here')
+						+post-feed('#', 'http://placehold.it/370x250', 'Title goes here')
+					.row
+						+pagination
+				#sidebar.col-md-4.hidden-xs.hidden-sm
+					.sidebar-block
+						.block-title.lined-top.lined-bottom
+							| about me
+						img.img-responsive(src="img/hip.jpg")
+						h2 Hernandez Higuan
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla velit, mollis eget metus sit amet, luctus suscipit neque. Nulla nec tempus nunc. Sed consequat metus ut dignissim accumsan.
+					.sidebar-block
+						img.img-responsive(src="http://placehold.it/400x400")
+					.sidebar-block
+						.block-title.lined-top.lined-bottom
+							| Recent posts
+						+media-object('#', 'http://placehold.it/100x100', 'Title goes here')
+						+media-object('#', 'http://placehold.it/100x100', 'Another title')
+						+media-object('#', 'http://placehold.it/100x100', 'Third title')
+					.sidebar-block
+						.block-title.lined-top.lined-bottom
+							| Subscribe
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla velit, mollis eget metus sit amet
+						.input-group
+							input.form-control(type="email", placeholder="Your email adress")
+							span.input-group-btn
+								button.btn.btn-black(type="button") Sign up
+					.sidebar-block
+						.block-title.lined-top.lined-bottom
+							| Categories
+						include _accordion.jade
+		#footer
+			include _footer.jade
+
+		script(src="js/jquery-2.2.3.min.js")
+		script(src="js/bootstrap.min.js")
+		script(src="js/main.js")
