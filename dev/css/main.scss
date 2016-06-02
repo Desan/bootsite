@@ -5,6 +5,37 @@ $white-color: #ffffff;
 $normal: 400;
 $bold: 600;
 
+@mixin transform($value){
+  -webkit-transform: ($value);
+     -moz-transform: ($value);
+      -ms-transform: ($value);
+          transform: ($value);
+}
+@mixin transition($value){
+  -webkit-transition: ($value);
+     -moz-transition: ($value);
+      -ms-transition: ($value);
+          transition: ($value);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
 
 /* Base styles
 =====================================>
@@ -12,6 +43,7 @@ $bold: 600;
 
 a, a:hover, a:visited {
 	color: black;
+	cursor: pointer;
 }
 a:hover, a:visited {
 	text-decoration: none;
@@ -29,4 +61,4 @@ a:hover, a:visited {
 @import "layout/sidebar";
 @import "layout/posts";
 @import "layout/footer";
-@import "theme", "helpers"; // Theme attributes
+@import "theme", "helpers", "media_queries"; // Theme attributes

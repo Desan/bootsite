@@ -4,29 +4,32 @@
 		.logo_title Dhaka
 		.logo_tagline Website Template for bloggers
 
-	.menu-icon.col-xs-6.col-sm-2.col-sm-pull-8
-		a(href="#")
+	.menu-icon.visible-xs-block.col-xs-2
+		a(data-toggle="mobile-menu")
 			i.fa.fa-reorder.fa-lg
 
-	.search-icon.col-xs-6.col-sm-2
-		a(href="#")
+	.search.col-xs-10.col-sm-4
+		a(data-toggle="search-box")
 			i.fa.fa-search.fa-lg.pull-right
+		form(name="search")
+			input(type="text" placeholder="Search for...")
 
-#nav.row.lined-top.lined-bottom.hidden-xs
-	ul.col-sm-12.col-md-10
-		li: a(href="#") home
-		li: a(href="#") mega menu
+nav.menu-container.row.lined-top.lined-bottom
+	ul.menu.col-sm-12.col-md-10
+		li.menu__item: a(href="#") home
+		li.menu__item(data-toggle="hover-dropdown")
+			a mega menu
 			ul.dropdown
-				li: a(href="#") item1
-				li: a(href="#") item2
-				li: a(href="#") item3
-		li: a(href="#") caregories
-		li: a(href="#") post styles
-		li: a(href="#") blog layouts
-		li: a(href="#") features
-		li: a(href="#") contact
+				li.dropdown__item: a(href="#") item1
+				li.dropdown__item: a(href="#") item2
+				li.dropdown__item: a(href="#") item3
+		li.menu__item: a() categories
+		li.menu__item: a(href="#") post styles
+		li.menu__item: a(href="#") blog layouts
+		li.menu__item: a(href="#") features
+		li.menu__item: a(href="#") contact
 
-	.col-md-2.hidden-sm.social
+	.social.col-md-2
 		a(href="#")
 			i.fa.fa-facebook
 		a(href="#")

@@ -15,7 +15,7 @@
 	text-transform: uppercase;
 }
 
-.logo_title::first-letter {
+.logo_title:first-letter {
 	font-size: 1.15em;
 }
 
@@ -27,37 +27,116 @@
 	letter-spacing: 1px;
 }
 
-.menu-icon, .search-icon {
-	padding: 36px 0 0 0;
+.menu-icon, .search {
+	padding: 36px 14px 0;
 }
 
+.search {
+	form {
+		overflow: hidden;
+	}
+	input {
+		position: absolute;
+		left: 0;
+		top: 32px;
+		height: 2em;
+		width: 80%;
+		border-style: none;
+		border-radius: 0.5em;
+		text-align: center;
+		background-color: $gray-color;
+	}
+}
 
-#nav {
-	padding: 18px 0;
-	ul {
+.menu-container {
+	display: none;
+	text-align: center;
+
+	.menu {
 		padding: 0;
 		margin: 0;
+
+		&__item {
+			list-style: none;
+			padding: 16px 18px;
+			text-transform: uppercase;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: $bold;
+			letter-spacing: 1px;
+		}
 	}
-	li {
-		display: inline-block;
-		list-style: none;
-		padding: 0 18px;
-	}
+}
+
+.social {
+	padding: 18px;
 	a {
-		text-transform: uppercase;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: $bold;
-		letter-spacing: -1px;
+		margin-left: 18px;
+	}
+}
+
+[data-toggle="hover-dropdown"] {
+	position: relative;
+	
+	&:hover {
+	background-color: $gray-color;
+	cursor: pointer;
+
+		& .dropdown {
+			display: block;
+		}
 	}
 }
 
 .dropdown {
+	padding: 0;
+	left: 0;
 	display: none;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+
+
+	&__item {
+		@include transform(translate(0,20px));
+		@include box-shadow(0px,8px,16px,rgba(0,0,0,0.2),false);
+		position: relative;
+		padding: 16px 18px;
+		list-style: none;
+		display: block;
+		background-color: $white-color;
+		min-width: 140px;
+	}
 }
 
-.social {
-	text-align: right;
-	a {
-		margin-left: 18px;
+@media screen and (min-width: 768px) {
+	.menu-container {
+		display: block;
+		padding: 0;
+		margin: 0 -15px;
+		text-align: left;
+
+		.menu {
+			&__item {
+				display: inline-block;
+				letter-spacing: -1px;
+			}
+		}
+	}
+
+	.social {
+		display: none;
+	}
+
+	.search {
+		input {
+			display: none;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.social {
+		display: block;
+		text-align: right;
 	}
 }
