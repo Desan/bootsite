@@ -20,15 +20,30 @@
 	margin-bottom: 60px;
 }
 
-.accordion {
+.c-accordion {
 	font-family: serif;
 	font-size: 1.1em;
 	padding-left: 0;
 	list-style: none;
 
-	a::before {
+	&__expand::before {
 		@include awesome-icon("\f054")
 		font-size: 10px;
 		margin-right: 12px;
+	}
+
+	&__item {
+		padding: 12px 0;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		border-bottom-color: $gray-color;
+
+		&:last-child {
+			border-bottom-style: none;
+		}
+	}
+
+	&__inner {
+		padding: 6px 32px;
 	}
 }

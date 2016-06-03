@@ -40,6 +40,7 @@ a:hover, a:visited {
   overflow: hidden; }
 
 .search input {
+  display: block;
   position: absolute;
   left: 0;
   top: 32px;
@@ -162,17 +163,26 @@ a:hover, a:visited {
 .sidebar-block {
   margin-bottom: 60px; }
 
-.accordion {
+.c-accordion {
   font-family: serif;
   font-size: 1.1em;
   padding-left: 0;
   list-style: none; }
-  .accordion a::before {
+  .c-accordion__expand::before {
     font-family: FontAwesome;
     content: "";
     display: inline-block;
     font-size: 10px;
     margin-right: 12px; }
+  .c-accordion__item {
+    padding: 12px 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #d5d5d5; }
+    .c-accordion__item:last-child {
+      border-bottom-style: none; }
+  .c-accordion__inner {
+    padding: 6px 32px; }
 
 .post {
   margin-bottom: 60px; }
@@ -226,7 +236,8 @@ a:hover, a:visited {
   color: #ffffff; }
 
 .images {
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0; }
 
 .col-footer-img {
   position: relative;

@@ -12,9 +12,27 @@ $(document).ready(function(){
 	});
 
 	// search form toggle
-	$('[data-toggle="search-box"]').click(function() {
-		$('.search input').fadeToggle(50);
+	$(window).resize(function() {
+		if ($(this).width() < 769) {
+			$('.search input').show();
+		}
 	});
 
-	// accordion
+	$('[data-toggle="search-box"]').click(function() {
+		if ($(window).width() > 768)
+			$('.search input').fadeToggle(50);
+	});
+
+	// simple accordion
+	$(function() {
+	
+		var allPanels = $('.c-accordion__inner').hide();
+
+		$('.c-accordion__expand').click(function() {
+			allPanels.slideUp();
+			$(this).siblings().slideDown();
+			return false;
+		});
+
+	});
 });

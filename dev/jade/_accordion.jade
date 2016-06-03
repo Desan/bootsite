@@ -1,9 +1,31 @@
-#cat.accordion.panel-group
-	.panel
-		a(href='#id' data-toggle='accordion' data-parent='#cat') Beaty
-		.panel-inner
-			#id.collapse.in Content
-	.panel
-		a(href='#id2' data-toggle='accordion' data-parent='#cat') Beaty-2
-		.panel-inner
-			#id2.collapse Content
+.c-accordion
+
+	.c-accordion__item
+		a.c-accordion__expand(data-toggle="accordion") Beaty
+		.c-accordion__inner
+			div content
+			div another line of
+	.c-accordion__item
+		a.c-accordion__expand(data-toggle="accordion") Buisness
+		.c-accordion__inner
+			| Content
+	.c-accordion__item
+		a.c-accordion__expand(data-toggle="accordion") Celebrity
+		.c-accordion__inner
+			| Content
+	.c-accordion__item
+		a.c-accordion__expand(data-toggle="accordion") Fashion
+		.c-accordion__inner
+			| Content
+	.c-accordion__item
+		a.c-accordion__expand(data-toggle="accordion") General
+		.c-accordion__inner
+			| Content
+	.c-accordion__item
+		a.c-accordion__expand(data-toggle="accordion") Magazine
+		.c-accordion__inner
+			| Content
+	.c-accordion__item
+		a.c-accordion__expand(data-toggle="accordion") Travel
+		.c-accordion__inner
+			| Content
